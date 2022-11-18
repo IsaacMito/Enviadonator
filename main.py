@@ -1,16 +1,40 @@
-# This is a sample Python script.
+from excel import Excel
+from enviadonator import Enviadonator
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+mensagem = """⚫🟡⚫🟡⚫🟡⚫🟡
+*CALCE PERFEITO*
+*COMEÇOU BLACK FRIDAY*
+
+Produtos com até 
+*50% DE DESCONTO*
+
+E isso mesmo!
+
+*METADE DO PREÇO*
+
+Usaflex, Skechers, 
+Piccadilly, Opanankem
+e muito mais
+🩴🥿👠👡👢
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+Venha tomar um delicioso café conosco e saia daqui com seu presente prontinho.
+🎁🍾🥂"""
+
+cod_campanha = 2
+
+excel:Excel = Excel(r"Y:\09 Area pessoal\9.5 Isaac\Calce Perfeito - CONTATOS\2022-11-16\AsaNorte.xlsx")
+
+Enviadonator(excel, mensagem, cod_campanha).start()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
+
+
+
+
+
+
