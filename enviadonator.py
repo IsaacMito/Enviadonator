@@ -4,15 +4,15 @@ from bss import Bss
 from chrome import Chrome
 from excel import Excel
 
+
 class Enviadonator:
 
-    def __init__(self, excel: Excel, mensagem: str, cod_campanha):
-        self.bss = Bss()
-        self.chrome = Chrome()
-        self.excel = excel
+    def __init__(self, excel: Excel, mensagem: str, cod_campanha: int):
+        self.bss: Bss = Bss()
+        self.chrome: Chrome = Chrome()
+        self.excel: Excel = excel
         self.mensagem: str = mensagem
-        self.cod_campanha = cod_campanha
-
+        self.cod_campanha: int = cod_campanha
 
     def start(self):
 
@@ -22,7 +22,10 @@ class Enviadonator:
             nome = self.excel.get_nome(row)
             status = self.excel.get_status(row)
 
-            entity = self.bss.get_entity("619" + celular, self.cod_campanha)
+            entity = (1, 1)
+
+            if celular != "None" and celular != "Home" and len(celular) > 7:
+                entity = self.bss.get_entity("619" + celular, self.cod_campanha)
 
             if status is None and len(entity) == 0:
 

@@ -19,7 +19,7 @@ class Excel:
     def get_celular(self, r):
         celular: str = str(self.sheet.cell(row=r, column=2).value)
 
-        celular = celular.replace('(', '').replace(')', '').replace(' ', '').replace('+55', '')
+        celular = celular.split(":::")[0].replace('(', '').replace(')', '').replace(' ', '').replace('+55', '').replace('-', '')
 
         if len(celular) == 12:
             celular = celular[4:]

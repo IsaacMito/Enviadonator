@@ -20,7 +20,7 @@ class Bss:
         cursor: Cursor = self.connection.cursor()
 
         sql = f"SELECT * FROM ENVIO_WHATSAPP WHERE NUMERO = {celular} AND COD_CAMPANHA = {cod_campanha} AND ROWNUM = 1"
-
+        print(sql)
         result = tuple(cursor.execute(sql))
 
         cursor.close()
