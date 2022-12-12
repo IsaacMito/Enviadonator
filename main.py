@@ -23,7 +23,7 @@ Venha tomar um delicioso café conosco e saia daqui com seu presente prontinho.
 
 cod_campanha:int = 1
 
-excel:Excel = Excel(r"Y:\09 Area pessoal\9.5 Isaac\Calce Perfeito - CONTATOS\2022-11-22\AsaSul.xlsx")
+excel:Excel = Excel(r"Y:\09 Area pessoal\9.5 Isaac\Calce Perfeito - CONTATOS\2022-12-12\AsaSul.xlsx")
 
 Enviadonator(excel, mensagem, cod_campanha).start()
 
