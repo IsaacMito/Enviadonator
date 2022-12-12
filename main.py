@@ -1,25 +1,23 @@
 from excel import Excel
 from enviadonator import Enviadonator
 
-mensagem = """⚫🟡⚫🟡⚫🟡⚫🟡
-*CALCE PERFEITO*
-*COMEÇOU BLACK FRIDAY*
+mensagem = """🔴🎄🎅🏻🔴🎄🎅🏻🔴🎄🎅🏻
+CHEEGGGOOUU O NATAL!
+CALCE PERFEITO
 
-Produtos com até 
-*50% DE DESCONTO*
+Presentes a partir 
+de R$ 69,99
 
-E isso mesmo!
+Conheça a nova coleção:
+Sandálias da Usaflex, 
+Chinelos da Piccadilly e 
+Tênis da Skechers.
 
-*METADE DO PREÇO*
+Peça o nosso catálogo!
+Você vai amar!
 
-Usaflex, Skechers, 
-Piccadilly, Opanankem
-e muito mais
-🩴🥿👠👡👢
-
-
-Venha tomar um delicioso café conosco e saia daqui com seu presente prontinho.
-🎁🍾🥂"""
+Aguardamos você com 
+café bem quentinho🥰"""
 
 cod_campanha:int = 1
 
