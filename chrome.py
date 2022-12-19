@@ -3,6 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import UnexpectedAlertPresentException
 
 import pickle
 
@@ -24,15 +25,18 @@ class Chrome:
 
         self.navegador.get(f"https://web.whatsapp.com/send?phone={numero}&text={mensagem}")
 
-        while len(self.navegador.find_elements(by=By.ID, value="side")) < 1:
-            time.sleep(1)
+        try:
+            while len(self.navegador.find_elements(by=By.ID, value="side")) < 1:
+                time.sleep(1)
 
-        time.sleep(5)
+            time.sleep(10)
 
-        if len(self.navegador.find_elements(by=By.CLASS_NAME, value="_3J6wB")) == 0:
-            return True
+            if len(self.navegador.find_elements(by=By.CLASS_NAME, value="_3J6wB")) == 0:
+                return True
 
-        return False
+            return False
+        except UnexpectedAlertPresentException:
+            return self.pesquisar(numero, mensagem)
 
     def enviar(self):
         try:

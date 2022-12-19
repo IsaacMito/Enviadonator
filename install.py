@@ -5,8 +5,10 @@ import zipfile
 try:
     import openpyxl
     import cx_Oracle
+    import selenium
 except ModuleNotFoundError:
     os.system('pip install openpyxl')
+    os.system('pip install selenium')
     os.system("python -m pip install cx_Oracle --upgrade")
 
     url_file = 'https://download.oracle.com/otn_software/nt/instantclient/213000/instantclient-basiclite-windows.x64-21.3.0.0.0.zip'

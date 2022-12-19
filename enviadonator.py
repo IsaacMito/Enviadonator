@@ -22,6 +22,9 @@ class Enviadonator:
             nome = self.excel.get_nome(row)
             status = self.excel.get_status(row)
 
+            if status is not None:
+                continue
+
             entity = (1, 1)
 
             if celular != "None" and celular != "Home" and len(celular) > 7:
@@ -40,5 +43,7 @@ class Enviadonator:
                     self.excel.set_status('Enviado', row)
                 else:
                     self.excel.set_status('Nao encontrado', row)
+            else:
+                self.excel.set_status('Ja enviado', row)
 
-                self.excel.salvar()
+            self.excel.salvar()
